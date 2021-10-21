@@ -1,8 +1,8 @@
 rgb2ansi256
 ===========
 
-rgb2ansi256 is a small Rust library to convert RGB 24bit colors into ANSI 256 color codes with zero dependencies and `const fn`.
-This crate was ported from [ansi_colours][] C library v1.0.4.
+rgb2ansi256 is a small Rust library to convert RGB 24-bit colors into ANSI 256 (8-bit) color codes with zero dependencies
+and `const fn`. This crate was ported from [ansi_colours][] C library v1.0.4.
 
 By porting the library, we have the following two benefits:
 
@@ -10,6 +10,8 @@ By porting the library, we have the following two benefits:
 - Compile time calculation (no runtime overhead)
 
 ```rust
+use rgb2ansi256::rgb_to_ansi256;
+
 const MEDIUM_SPRING_GREEN: u8 = rgb_to_ansi256(0, 255, 175);
 
 assert_eq!(MEDIUM_SPRING_GREEN, 49);

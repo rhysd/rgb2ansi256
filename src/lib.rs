@@ -1,3 +1,20 @@
+//! This is a small Rust library to convert RGB 24bit colors into ANSI 256 (8-bit) color codes with zero dependencies
+//! and `const fn`. This crate was ported from [ansi_colours][1] C library v1.0.4.
+//!
+//! By porting the library, we have the following two benefits:
+//!
+//! - No unsafety
+//! - Compile time calculation (no runtime overhead)
+//!
+//! ```rust
+//! use rgb2ansi256::rgb_to_ansi256;
+//!
+//! const MEDIUM_SPRING_GREEN: u8 = rgb_to_ansi256(0, 255, 175);
+//!
+//! assert_eq!(MEDIUM_SPRING_GREEN, 49);
+//! ```
+//! [1]: https://github.com/mina86/ansi_colours
+
 // This library was ported from https://github.com/mina86/ansi_colours/blob/eef25edf851c0d78e1b68b713a238c5aaf562fbd/src/ansi256.c
 //
 // ansi_colours – true-colour ↔ ANSI terminal palette converter
@@ -33,6 +50,7 @@ const ANSI256_FROM_GREY: [u8; 256] = [
     231, 231, 231, 231, 231, 231, 231,
 ];
 
+/// Convert RGB value into ANSI 256 color codes.
 pub const fn rgb_to_ansi256(r: u8, g: u8, b: u8) -> u8 {
     let rgb = ((r as u32) << 16) + ((g as u32) << 8) + b as u32;
     if r == g && g == b {
