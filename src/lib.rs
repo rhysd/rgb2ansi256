@@ -118,4 +118,24 @@ const fn cube_index_blue(v: u8) -> u32 {
 #[cfg(test)]
 mod tests {
     use super::rgb_to_ansi256;
+
+    const MEDIUM_SPRING_GREEN: u8 = rgb_to_ansi256(0, 255, 175);
+
+    #[test]
+    fn validate_const_eval() {
+        assert_eq!(MEDIUM_SPRING_GREEN, 49);
+    }
+
+    #[test]
+    fn validate_with_ansi_colours() {
+        for r in 0..=255 {
+            for g in 0..=255 {
+                for b in 0..=255 {
+                    let got = rgb_to_ansi256(r, g, b);
+                    let expected = ansi_colours::ansi256_from_rgb((r, g, b));
+                    assert_eq!(expected, got);
+                }
+            }
+        }
+    }
 }
