@@ -165,7 +165,7 @@ mod tests {
                 for b in 0..=255 {
                     let got = rgb_to_ansi256(r, g, b);
                     let expected = ansi_colours::ansi256_from_rgb((r, g, b));
-                    assert_eq!(expected, got);
+                    assert_eq!(expected, got, "r={}, g={}, b={}", r, g, b);
                 }
             }
         }
