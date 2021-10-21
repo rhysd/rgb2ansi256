@@ -2,6 +2,22 @@
 name = "rgb2ansi256"
 version = "0.1.0"
 edition = "2018"
+authors = ["rhysd <lin90162@yahoo.co.jp>"]
+description = "Convert RGB 24-bit colors into ANSI 256 (8-bit) color codes with zero dependencies and `const fn`"
+license = "MIT"
+homepage = "https://github.com/rhysd/rgb2ansi256#readme"
+repository = "https://github.com/rhysd/rgb2ansi256"
+readme = "LICENSE"
+include = [
+    "/src",
+    "/LICENSE",
+    "/README.md",
+]
+categories = ["graphics"]
+keywords = ["rgb", "ansi-256-colors", "conversion"]
+
+[badges]
+maintenance = { status = "passively-maintained" }
 
 [dependencies]
 
