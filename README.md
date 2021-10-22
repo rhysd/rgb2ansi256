@@ -21,6 +21,13 @@ assert_eq!(MEDIUM_SPRING_GREEN, 49);
 
 [The documentation](https://docs.rs/rgb2ansi256)
 
+Here is a comparison before/after conversion.
+
+<img src="https://github.com/rhysd/ss/raw/master/rgb2ansi256/compare.png" alt="comparison" width=533 height=181/>
+
+The left window is iTerm2 which supports 24-bit colors (true colors). The right window is Terminal.app which supports only
+8-bit colors. Conversion could reproduce 24-bit colors in 8-bit colors well.
+
 ## Installation
 
 Add this crate to your `Cargo.toml`.
