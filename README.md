@@ -39,7 +39,7 @@ rgb2ansi = "0.1"
 
 ## Benchmark
 
-This is the result of [the micro benchmark suite](./benches/bench.rs). rgb2ansi256 is slightly faster than ansi_colours.
+This is the result of [the micro benchmark suite](./bench/benches/bench.rs). rgb2ansi256 is slightly faster than ansi_colours.
 
 ```
 rgb2ansi256             time:   [150.58 us 151.06 us 151.55 us]
