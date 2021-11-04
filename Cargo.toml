@@ -22,16 +22,13 @@ maintenance = { status = "passively-maintained" }
 [profile.release]
 lto = true
 
-[lib]
-bench = false
-
 [dependencies]
 
 [dev-dependencies]
 ansi_colours = "=1.0.4"
-criterion = "0.3"
 
-[[bench]]
-name = "bench"
-harness = false
+[workspace]
+members = [
+    "bench",
+]
 
