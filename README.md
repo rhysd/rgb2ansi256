@@ -43,15 +43,11 @@ This is the result of [the micro benchmark suite](./bench/benches/bench.rs). rgb
 
 ```
 rgb2ansi256             time:   [150.58 us 151.06 us 151.55 us]
-                        change: [-1.2657% -0.9774% -0.6991%] (p = 0.00 < 0.05)
-                        Change within noise threshold.
 Found 9 outliers among 100 measurements (9.00%)
   5 (5.00%) low mild
   4 (4.00%) high mild
 
 ansi_colours            time:   [158.07 us 158.83 us 159.64 us]
-                        change: [-1.3717% -0.7338% -0.1909%] (p = 0.02 < 0.05)
-                        Change within noise threshold.
 Found 12 outliers among 100 measurements (12.00%)
   3 (3.00%) low mild
   8 (8.00%) high mild

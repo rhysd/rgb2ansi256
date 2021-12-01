@@ -151,10 +151,9 @@ const fn cube_index_blue(v: u8) -> u32 {
 mod tests {
     use super::rgb_to_ansi256;
 
-    const MEDIUM_SPRING_GREEN: u8 = rgb_to_ansi256(0, 255, 175);
-
     #[test]
     fn validate_const_eval() {
+        const MEDIUM_SPRING_GREEN: u8 = rgb_to_ansi256(0, 255, 175);
         assert_eq!(MEDIUM_SPRING_GREEN, 49);
     }
 
