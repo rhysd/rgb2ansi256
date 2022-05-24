@@ -34,7 +34,7 @@ Add this crate to your `Cargo.toml`.
 
 ```toml
 [dependencies]
-rgb2ansi = "0.1"
+rgb2ansi256 = "0.1"
 ```
 
 ## Benchmark
